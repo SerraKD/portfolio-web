@@ -442,3 +442,34 @@ textarea:focus-visible {
   white-space: nowrap;
   border: 0;
 }
+
+/* Highlight active nav link */
+.site-nav a.active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  font-weight: 600;
+}
+
+/* Mobile nav spacing */
+@media (max-width: 768px) {
+  .site-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* space between nav items */
+    padding: 1rem 0;
+  }
+
+  .site-nav a {
+    padding: 0.5rem 0;
+    font-size: 1.125rem;
+  }
+
+}
+
+/* Highlight active nav link (desktop + mobile) */
+.site-nav a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  font-weight: 600;
+}
