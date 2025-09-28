@@ -315,7 +315,21 @@
           <div class="section-header">
             <h2>Contact</h2>
           </div>
-          <form class="contact" name="contact" netlify>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <!-- Honeypot field (spam protection) -->
+            <p class="sr-only" hidden>
+              <label
+                >Don’t fill this out if you’re human: <input name="bot-field"
+              /></label>
+            </p>
+
+            <!-- existing fields… -->
             <div class="form-row">
               <label for="name">Name</label>
               <input
